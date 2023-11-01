@@ -1,0 +1,8 @@
+dist/
+node_modules/
+
+video/
+**/*.webm
+**/*.mp4
+# **/*.ts
+*.txt

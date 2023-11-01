@@ -1,0 +1,37 @@
+{
+  "name": "ffmpeg-testbed",
+  "version": "0.0.1",
+  "description": "testbed for ffmpeg",
+  "main": "dist/main.js",
+  "type": "module",
+  "author": "wonkyDD",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev:build": "tsup src/main.ts --format esm --watch",
+    "dev": "pnpm dev:build --onSuccess \"pnpm start\"",
+    "prod": "tsup src/main.ts --format esm --minify --dts --clean --legacy-output dist/main.js",
+    "test": "vitest --config vitest.config.ts",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "ffmpeg",
+    "video",
+    "ffprobe",
+    "ffmpeg-static",
+    "video-editor"
+  ],
+  "dependencies": {
+    "execa": "^8.0.1",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "tsup": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/ffprobe-static": "^2.0.2",
+    "@types/node": "^20.8.9",
+    "eslint": "^8.52.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  }
+}
