@@ -8,7 +8,8 @@ import {
 import {
 	get_keyframe,
 	write_file,
-	string_sum
+	string_sum,
+	init
 } from "./util";
 import { Frame } from './types';
 import { log } from 'console';
@@ -33,10 +34,6 @@ const edit_with_keyframe = async(next_keyframe: string) => {
 	await execa("rm", ["-rf", "2.webm", "out.webm"]);
 	await cut(video_dir + video, string_sum(`${step + interval}`, next_keyframe), `${2 * step + interval}`, "2.webm");
 }
-
-const init = async() => {
-	await execa("rm", ["-rf", "1.webm", "2.webm", "out.webm"]);
-};
 
 (async() => {
 	// log(import.meta.url);

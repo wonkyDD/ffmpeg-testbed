@@ -87,6 +87,10 @@ const string_sum = (a: string, b: string) => {
 	return (Number(a) + Number(b)).toFixed(6);
 };
 
+const init = async() => {
+	await execa("rm", ["-rf", "1.webm", "2.webm", "out.webm"]);
+};
+
 export {
 	check_file_exist,
 	write_file,
@@ -99,4 +103,5 @@ export {
 	get_duration,
 	get_keyframe,
 	string_sum,
+	init
 }
