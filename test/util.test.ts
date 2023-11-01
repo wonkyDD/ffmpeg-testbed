@@ -8,7 +8,7 @@ import {
     // afterAll,
     // vi
 } from 'vitest'
-import { string_sum } from '../src/util'
+import { string_sum } from '@/src/util'
 
 describe('util test', () => {
     test('string_sum test', () => {
